@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Add Time To Appointments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @add_time_to_appointments.each do |add_time_to_appointment| %>
+      <tr>
+        <td><%= add_time_to_appointment.time %></td>
+        <td><%= link_to 'Show', add_time_to_appointment %></td>
+        <td><%= link_to 'Edit', edit_add_time_to_appointment_path(add_time_to_appointment) %></td>
+        <td><%= link_to 'Destroy', add_time_to_appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Add Time To Appointment', new_add_time_to_appointment_path %>

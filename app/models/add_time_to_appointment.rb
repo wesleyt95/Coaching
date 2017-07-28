@@ -1,0 +1,2 @@
+class AddTimeToAppointment < ApplicationRecord
+end
